@@ -14,4 +14,72 @@ Moreover,  The game features a number of horde mode battles in which the player 
 
 Lastly, I aspire to explore a blend of a point-and-click adventure and an RPG. Drawing inspiration from BioShock Infinite's stylish approach and enigma, but maybe creating a pixelated game with simpler gameplay but an intricate premise.
 
+# Design Journal #2 : Conceptualization
+
+I’m sorry. I made notes of my process every week, but had no time to condense them into a journal. Also, I struggled to settle on a feasible idea. This left me without a clear direction. I now know I'm on the right path and that I'm making what I like. Now, I'm turning my notes to a journal,  reflecting on all my ideas and chronicling every step that brought me to this point.
+
+## Lens of the problem statement
+
+What problem am I trying to solve? My main problem is the functionality of the game. I believe the aesthetics I'm aiming for don't necessarily need to dictate the content. Especially in an early stage of an ambitious project. Now, it makes sense to me to separate the form from the content. For instance, if the aesthetic is ww1, the content doesn't need to be rpg, or shooter. It can be anything. 
+Have I been making assumptions that have nothing to do with the purpose? The primary assumption that I'm making is that the game must incorporate a story; a beginning, a conflict, and an ending.  his assumption poses the challenge of determining how to structure the narrative which is something I don't really have to worry about at this stage, so it's more beneficial for me to conceptualize the story in terms of an central event, in which the character experiences 2 outcomes (for example win or loss).
+
+Is a game even the best solution? Why? Yes because it has to be PLAYED!
+How will I be able to tell if the problem is solved?The game will come to life once it finds its niche. This is the hardest aspect for me since it inspires me to categorize the game, yet I currently lack insight into its  mechanics, challenges, and constraints. I only have a sense of its overall feel. I wonder if  the reverse could be an easier approach to game making- To build the experience upon the rules. 
+
+Don't think of an idea, instead think about the design values.
+
+## Design values
+
+My current design values center on the user experience, aesthetics, and emotion. These values will remain consistent across all three of my forthcoming ideas.
+
+## Problem statement/Question 
+
+How can I craft an epic game that is not action? More specifically, how can I convey both gore and cuteness in an unconventional manner?
+
+## Ideation process (done in class)
+
+**Hybrids**
+Cute and gore
+**Noun-verb pairs**
+Girl falls, jacket breaks, 
+**Locations**
+Jungle? hospital?
+**Character**
+Girl
+The character is not you, you are helping her or maybe you are against her? The choice is yours
+
+## Ideas: 
+
+### Idea 1: 
+
+Girl has to make something with the ingredients in the set time, to be able to perform her ritual
+Players take on the role of a girl who must gather and combine specific ingredients within a set time frame to complete a ritual. She has to follow precise instructions to successfully perform the ritual before time runs out. 
+Point and click adventure game. Crafting mechanism (timing based), can be educational too.
+
+### Idea 2:
+Player takes on the role of a girl who awakens in a mysterious jungle wearing a white gown and feeling disoriented. She must navigate through the jungle, encountering various strange beasts along the way. Each beast challenges her with riddles, and upon overcoming them, she obtains items needed for her outfit, in preparation for her night out. 
+The game can end here or it can lead to a twist; The game is happening backwards. The night out is actually how she ends up in the jungle, with each beast taking a piece of her clothing. She, the player, will gradually unravel the sequence of events of what happened to her. The game will loop forever. 
+
+fashion game. Riddle game, twist, infinite game
+
+### Idea 3:
+The player is involved in a situation. The story progresses, as he or she finds stolen/lost objects and has to return them to the original person or place.
+
+Narrative game, Scavenging  Games
+
+###Other ideas:
+cooking game, walking/exploration simulator 
+
+
+## Inspiring games: alice madness returns, last train home: https://hby.itch.io/last-train-home
+
+
+
+
+
+
+
+
+
+
 
