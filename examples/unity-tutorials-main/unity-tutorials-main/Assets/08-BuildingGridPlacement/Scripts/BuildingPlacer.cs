@@ -22,6 +22,8 @@ public class BuildingPlacer : MonoBehaviour
         instance = this; // (Singleton pattern)
         _mainCamera = Camera.main;
         _buildingPrefab = null;
+        
+        GameObject.DontDestroyOnLoad(this.gameObject);
     }
 
     private void Update()

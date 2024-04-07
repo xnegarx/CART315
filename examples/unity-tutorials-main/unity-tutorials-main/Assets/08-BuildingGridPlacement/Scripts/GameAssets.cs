@@ -10,7 +10,8 @@ public class GameAssets : MonoBehaviour
         {
             if (_instance == null)
             {
-                _instance = Resources.Load<GameAssets>("GameAssets");
+                Debug.Log("salam");
+                _instance = Instantiate(Resources.Load<GameAssets>("GameAssets"));
             }
             return _instance;
         }

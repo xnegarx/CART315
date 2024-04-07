@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 2924997150061720242}
   - component: {fileID: 2924997150061720243}
   - component: {fileID: 8244289595076357093}
+  - component: {fileID: -1455198040546440639}
   - component: {fileID: 7399250492390866620}
   m_Layer: 0
   m_Name: House-001
@@ -186,6 +187,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1455198040546440639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2924997150061720240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f9d0960372f4ebb8885a3503a0d7b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &7399250492390866620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,6 +214,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68557f06c3201b45946811bd2737714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellSize: 0
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  cellSize: 5
   gridOffset: {x: 0, y: 0}
   gridRenderer: {fileID: 0}

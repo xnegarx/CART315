@@ -20,9 +20,12 @@ private void Awake(){
 
 
 private void Start(){
-    Debug.Log("Start");
+
+     Debug.Log("chishod");
+
     CreateItemButton(Item.GetSprite(Item.ItemType.Chair), "Chair", "upgrade rent to 20", Item.GetCost(Item.ItemType.Chair), 0);
-    CreateItemButton(Item.GetSprite(Item.ItemType.Table), "Chair", "upgrade rent to 30", Item.GetCost(Item.ItemType.Table), 1);
+       
+    CreateItemButton(Item.GetSprite(Item.ItemType.Table), "Table", "upgrade rent to 30", Item.GetCost(Item.ItemType.Table), 1);
     // CreateItemButton(Item.GetSprite(Item.ItemType.Bed), "Bed", "upgrade rent to 40", Item.GetCost(Item.ItemType.Bed), 0);
 
 

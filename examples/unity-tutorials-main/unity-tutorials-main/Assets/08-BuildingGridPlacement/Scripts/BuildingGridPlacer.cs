@@ -5,12 +5,9 @@ using UnityEngine.EventSystems;
 
 public class BuildingGridPlacer : BuildingPlacer
 {
-    public float cellSize;
+    public float cellSize =5;
     public Vector2 gridOffset;
     public Renderer gridRenderer;
-
-    
-
 
 #if UNITY_EDITOR
     private void OnValidate()
@@ -54,10 +51,6 @@ public class BuildingGridPlacer : BuildingPlacer
                 _toBuild.transform.Rotate(Vector3.up, 90);
             }
 
-
-
-
-
             _ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(_ray, out _hit, 1000f, groundLayerMask))
             {
@@ -66,16 +59,12 @@ public class BuildingGridPlacer : BuildingPlacer
 
                 if (Input.GetMouseButtonDown(0))
                 { // if left-click
-
-                BuildingManager m = _toBuild.GetComponent<BuildingManager>();
-                
-               
-              
-                Debug.Log("placed");
-                    
+                    BuildingManager m = _toBuild.GetComponent<BuildingManager>();
                     if (m.hasValidPlacement)
                     {
                         m.SetPlacementMode(PlacementMode.Fixed);
+                         //SABINE
+                        m.isSetInitial=true;
 
                         // shift-key: chain builds
                         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
@@ -90,30 +79,8 @@ public class BuildingGridPlacer : BuildingPlacer
                             _toBuild = null;
                             _EnableGridVisual(false);
                         }
-
-                        // if(Input.GetMouseButtonDown(0)){
-                        // Debug.Log("invalidate");
-                        // m.SetPlacementMode(PlacementMode.Invalid);
-
-                        // }
-                    
-                    // else if ((m.hasValidPlacement) && Input.GetMouseButtonDown(0))
-                    // {
-                    //     Debug.Log("invalidate");
-                    //     m.SetPlacementMode(PlacementMode.Invalid);
-
-                    // }
+                    }
                 }
-
-                }
-
-
-
-
-
-
-
-
 
             }
             else if (_toBuild.activeSelf) _toBuild.SetActive(false);
