@@ -6,78 +6,151 @@ using UnityEngine.UI;
 
 public class ChangeScenes : MonoBehaviour
 {
+    public static ChangeScenes instance;
+    public bool hasAccepted = false;
+    private bool guestKilled = false;
 
-//public Player player;
+    bool roomButton = false;
+    bool roomButton2 = false;
+    bool roomButtonStory = false;
+    bool receptionButton = false;
+    bool receptionButton2 =false;
+    bool killButton = false;
 
+    //bool skip= false;
 
-
-public static ChangeScenes instance;
-private bool hasAccepted = false;
-
-
-
-
-
-
-private void Awake(){
-    if (instance == null)
-    {
-        instance = this;
-        DontDestroyOnLoad(gameObject);
-    } 
-    // else
-    // {
-    //     Destroy(gameObject);
-    // }
-}
-
-void Start(){
-    	
-   
-    
-}
-
-
-	
-
- public void setHasAccepted ()
-{
-    hasAccepted = true;
-}
-
-
-bool getAccepted(){
-    Debug.Log(hasAccepted);
-    return hasAccepted;
-}
-
-
-
-
-public void GoToCounter(){
-    SceneManager.LoadScene("Reception");
-   
-
-}
-
-public void GoToRoom(){
-    Debug.Log(getAccepted());
-      if (getAccepted() == true){
-        SceneManager.LoadScene("RoomLocked");
-      //  Invoke(SceneManager.LoadScene("Room"), 10f);
-    } else {
-    SceneManager.LoadScene("Room");
+    private void Awake(){
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        } 
     }
 
+    void Start(){
+        hasAccepted = false;
+    }
+
+    void Update(){
+
+        /*** reset booleans ***/
+        // i have to reset the booleans everytime, since im reassigning my buttons based on the circumstances
+        if(SceneManager.GetActiveScene().name.Equals("Reception") ){
+            receptionButton =false;  
+            receptionButton2=false;
+            killButton =false;
+        }
+
+        if(SceneManager.GetActiveScene().name.Equals("Room") || SceneManager.GetActiveScene().name.Equals("RoomLocked")){
+            roomButton =false;
+            roomButton2 =false;
+        }
+
+
+
+        // if in "Story" scene and no room button, assign the button (goes to room)
+        if(!roomButtonStory && SceneManager.GetActiveScene().name.Equals("Story") ){
+            Button test =  GameObject.Find("ButtonRoom").GetComponent<Button>();
+            test.onClick.AddListener(GoToRoom);
+            roomButtonStory=true;
+        }
+
+        // if in "Room" scene and no reception button, assign the button (goes to reception)
+        if(!receptionButton && SceneManager.GetActiveScene().name.Equals("Room") ){
+            Button test =  GameObject.Find("ButtonReception").GetComponent<Button>();
+            test.onClick.AddListener(GoToReception);
+            receptionButton=true;     
+            Debug.Log("im in room now");
+            //why does this show up in the reception 
+        }
+
+       
+
+if (SceneManager.GetActiveScene().name.Equals("RoomLocked")) {
+    Button test2 = GameObject.Find("ButtonKill").GetComponent<Button>();
+    Button test1 = GameObject.Find("ButtonReception").GetComponent<Button>();
+
+    //Check if "KillButton" button is clicked
+ 
+ if(!killButton){
+    test2.onClick.AddListener(() => {
+        Invoke("GoToRoom", 5f);
+  		Debug.Log("Go to room");
+    });
+    killButton =true;
 }
 
-// will add a new introductery scene afterwards
-public void StartGame(){
-    SceneManager.LoadScene("Story");
+//for reception 
+if (!receptionButton2){
 
-}
+    // Check if "ButtonReception" button is clicked
+    test1.onClick.AddListener(() => {
+        GoToReception();
+       Debug.Log("Go to reception");
+     });
+     
+       receptionButton2 = true;
+    }
+     
+}//endRoomLocked
 
 
+        // if in "Reception" and offer is not accepted, assign the room button (goes to room)
+        if(!roomButton && !getAccepted() && SceneManager.GetActiveScene().name.Equals("Reception")){
+            Button test =  GameObject.Find("ButtonRoom").GetComponent<Button>();
+            test.onClick.AddListener(GoToRoom);
+            roomButton=true;
+        }
+
+        //if in "Reception" and offer is accepted, assign the the room button (goes to the locked room)
+        if(!roomButton2 && getAccepted() && SceneManager.GetActiveScene().name.Equals("Reception")){
+            Button test =  GameObject.Find("ButtonRoom").GetComponent<Button>();
+            test.onClick.RemoveAllListeners();
+            test.onClick.AddListener(GoToRoomN);
+            roomButton2=true;
+            // goes back to room after 10 seconds
+            Invoke("roomEmpty", 10f);
+
+        }
+
+    }
+
+    public void roomEmpty(){
+        hasAccepted =false;
+    }
+
+    public void setHasAccepted (){
+        hasAccepted = true;
+    }
+
+    public bool getAccepted(){
+        return hasAccepted;
+    }
+
+    public void setGuestKilled(){
+        guestKilled = true;
+    }
+    
+    public bool getGuestKilled(){
+
+         return guestKilled;
+    }
+
+    public void GoToReception(){
+        SceneManager.LoadScene("Reception");
+    }
+
+    public void GoToRoom(){
+        SceneManager.LoadScene("Room");
+    }
+
+    public void GoToRoomN(){
+        SceneManager.LoadScene("RoomLocked");
+    }
+
+    public void StartGame(){
+        SceneManager.LoadScene("Story");
+    }
 
 
 

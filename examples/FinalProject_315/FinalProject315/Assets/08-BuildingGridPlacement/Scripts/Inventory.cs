@@ -33,7 +33,6 @@ public class Inventory : MonoBehaviour
 
     public void AddToInventory(Item.ItemType itemType){
 
-        
     //inventoryList.Add(itemType);
 
        // Debug.Log(inventoryList[0]);

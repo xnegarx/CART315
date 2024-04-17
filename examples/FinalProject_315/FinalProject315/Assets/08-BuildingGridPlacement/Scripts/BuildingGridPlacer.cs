@@ -7,20 +7,23 @@ public class BuildingGridPlacer : BuildingPlacer
 {
     public float cellSize =5;
     public Vector2 gridOffset;
-    public Renderer gridRenderer;
+   // public Renderer gridRenderer;
 
 #if UNITY_EDITOR
     private void OnValidate()
     {
-        _UpdateGridVisual();
+      //  _UpdateGridVisual();
     }
 #endif
 
     private void Start()
     {
          manager = GameObject.Find("GameManager");
-        _UpdateGridVisual();
-        _EnableGridVisual(false);
+    //   _UpdateGridVisual(); 
+     //   _EnableGridVisual(false);
+
+     
+       
     }
 
     private void Update()
@@ -34,7 +37,7 @@ public class BuildingGridPlacer : BuildingPlacer
                 Destroy(_toBuild);
                 _toBuild = null;
                 _buildingPrefab = null;
-                _EnableGridVisual(false);
+               // _EnableGridVisual(false);
                 return;
             }
 
@@ -75,6 +78,12 @@ public class BuildingGridPlacer : BuildingPlacer
                         m.SetPlacementMode(PlacementMode.Fixed);
                          //SABINE
                         m.isSetInitial=true;
+                        if(_toBuild!=null){
+                        Debug.Log(_toBuild);
+                        DontDestroyOnLoad(_toBuild);
+                        }
+
+
 
                         // shift-key: chain builds
                         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
@@ -87,7 +96,7 @@ public class BuildingGridPlacer : BuildingPlacer
                         {
                             _buildingPrefab = null;
                             _toBuild = null;
-                            _EnableGridVisual(false);
+                           // _EnableGridVisual(false);
                         }
                     }
                 }
@@ -105,7 +114,7 @@ public class BuildingGridPlacer : BuildingPlacer
     protected override void _PrepareBuilding()
     {
         base._PrepareBuilding();
-        _EnableGridVisual(true);
+       // _EnableGridVisual(true);
     }
 
     private Vector3 _ClampToNearest(Vector3 pos, float threshold)
@@ -120,17 +129,17 @@ public class BuildingGridPlacer : BuildingPlacer
         return v;
     }
 
-    private void _EnableGridVisual(bool on)
-    {
-        if (gridRenderer == null) return;
-        gridRenderer.gameObject.SetActive(on);
-    }
+    // private void _EnableGridVisual(bool on)
+    // {
+    //    if (gridRenderer == null) return;
+    //    gridRenderer.gameObject.SetActive(on);
+    // }
 
-    private void _UpdateGridVisual()
-    {
-        if (gridRenderer == null) return;
-        gridRenderer.sharedMaterial.SetVector(
-            "_Cell_Size", new Vector4(cellSize, cellSize, 0, 0));
-    }
+    // private void _UpdateGridVisual()
+    // {
+    //     if (gridRenderer == null) return;
+    //     gridRenderer.sharedMaterial.SetVector(
+    //         "_Cell_Size", new Vector4(cellSize, cellSize, 0, 0));
+    // }
 
 }

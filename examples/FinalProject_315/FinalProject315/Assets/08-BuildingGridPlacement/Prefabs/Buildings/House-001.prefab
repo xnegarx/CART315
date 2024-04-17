@@ -139,6 +139,7 @@ MonoBehaviour:
   hasValidPlacement: 0
   isFixed: 0
   isSetInitial: 0
+  itemType: 0
 --- !u!65 &2924997150061720243
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -202,6 +203,7 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  manager: {fileID: 0}
 --- !u!114 &7399250492390866620
 MonoBehaviour:
   m_ObjectHideFlags: 0

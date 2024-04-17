@@ -30,11 +30,11 @@ public class CameraManager : MonoBehaviour
 
         if(SceneManager.GetActiveScene().buildIndex == 3 && changeCamera == false ){
 
-        transform.position = new Vector3(24.6f, 25f, -24.6f);
+        transform.position = new Vector3(24.6f, 20f, -24.6f);
 
-        transform.rotation = Quaternion.Euler(30, -45, 0);
+        transform.rotation = Quaternion.Euler(23, -45, 0);
 
-        main.orthographicSize = 21.6f;
+        main.orthographicSize = 24f;
 
         changeCamera = true;
         
@@ -55,6 +55,8 @@ public class CameraManager : MonoBehaviour
 
 
 }
+
+
 
         
     }

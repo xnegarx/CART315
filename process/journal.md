@@ -74,12 +74,51 @@ cooking game, walking/exploration simulator
 ## Inspiring games: alice madness returns, last train home: https://hby.itch.io/last-train-home
 
 
+# Design Journal #3 : Prototyping Stage 2
+
+Although I love a good story driven game, I don't want to get wrapped up in that for this project. Essentially, I seek to incorporate both narrative depth and interactive elements, even if they're relatively straightforward. 
+
+At this point, I've spent considerable time wondering if I can translate my ideas from the last journal into actual games. Given it's my first game, everything seems unattainable. In my last journal my main struggle was balancing the story and the mechanic of the game. And I think I've finally come to a conclusion. I’ve been dancing around the idea that I really want to make a 2000s flash game style. 
+
+**What if I make a tycoon/management game where the player who is the manager might be a serial killer.**
+
+This seems to be the perfect blend of story, and game since the story is infused to the game, meaning I don't need much narrative backbone to push the game and since I might not have enough time to create my own art for the game, having it look a bit weird, and the story be sloppy can be part of the experience!!!! 
+
+Also the “unconventional” serial killer angle makes perfect sense
+
+A tycoon game at its core embodies capitalism. 
+
+The story is then completely up to the player (hence the “might '' be a serial killer) because they choose if they would kill the guest, become rich faster, or go through the pain of being a good business person, slowly making money, potentially upgrading, and making close to no profit. Since killing the guest will speed up the pace of the game, this creates stakes for the game; the players' integrity is sacrificed if they want to become RICH.
+
+The game's challenge is straightforward, countering my tendency to over complicate things and it aligns with my initial problem statement and design values: How can I convey both gore and cuteness in an unconventional manner?
+
+**Do you have what it takes?**
+
+The main game mechanic involves a grid placement system where objects can be snapped to and moved around. This doesn't seem that difficult to obtain. Furthermore, as it's a management game all rules are arbitrary/metaphorical and that is fine (e.g., killing a guest earns +50 money). At this stage, I'm gonna put the serial killer angle aside and focus on getting the basic room thing going. We will see about that in the next entry. 
 
 
+## Premise of the game: Girl rents out her room to people, then she uses the money to upgrade the room.
 
+-Genre: management game
+-Look: Isometric view of the room. Another scene for the reception (Girl is sitting at the desk)
+-Mechanic: girl can decorate the room with furniture 
+-Challenge: She needs money
 
+-Components of the game:
+1.Grid placement system 
+2.Inventory mechanic
+3.Shop mechanic
+4.Changing the scenes 
 
+## Starting point: 
 
+Getting the grid placement system working
+For first prototype, I installed a starter pack 
+https://github.com/MinaPecheux/unity-tutorials/blob/main/README.md#08-implementing-a-grid-based-building-placement-system
+
+My main concern as of now is that there are literally zero tutorials on how to make a tycoon game in unity. lol.
+
+## Inspirations: Love hotels, techno beat, real images
 
 
 

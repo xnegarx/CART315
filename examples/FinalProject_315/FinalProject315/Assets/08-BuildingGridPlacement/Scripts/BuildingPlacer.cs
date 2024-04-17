@@ -33,7 +33,7 @@ public class BuildingPlacer : MonoBehaviour
     void Start()
     {
    
-    DontDestroyOnLoad(gameObject); // Make the BuildingPlacer persistent across scenes
+    //DontDestroyOnLoad(gameObject); // Make the BuildingPlacer persistent across scenes
 
     //LoadPlacedObjects(); // Load previously placed objects when the scene starts
    
