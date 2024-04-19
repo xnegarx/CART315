@@ -74,7 +74,7 @@ cooking game, walking/exploration simulator
 ## Inspiring games: alice madness returns, last train home: https://hby.itch.io/last-train-home
 
 
-# Design Journal #3 : Prototyping Stage 2
+# Design Journal #3 : Prototyping Stage 1
 
 Although I love a good story driven game, I don't want to get wrapped up in that for this project. Essentially, I seek to incorporate both narrative depth and interactive elements, even if they're relatively straightforward. 
 
@@ -99,16 +99,16 @@ The main game mechanic involves a grid placement system where objects can be sna
 
 ## Premise of the game: Girl rents out her room to people, then she uses the money to upgrade the room.
 
--Genre: management game
--Look: Isometric view of the room. Another scene for the reception (Girl is sitting at the desk)
--Mechanic: girl can decorate the room with furniture 
--Challenge: She needs money
+-Genre: management game<br />
+-Look: Isometric view of the room. Another scene for the reception (Girl is sitting at the desk)<br />
+-Mechanic: girl can decorate the room with furniture<br />
+-Challenge: She needs money<br />
 
--Components of the game:
-1.Grid placement system 
-2.Inventory mechanic
-3.Shop mechanic
-4.Changing the scenes 
+-Components of the game:<br />
+1.Grid placement system<br />
+2.Inventory mechanic<br />
+3.Shop mechanic<br />
+4.Changing the scenes<br />
 
 ## Starting point: 
 
@@ -120,5 +120,69 @@ My main concern as of now is that there are literally zero tutorials on how to m
 
 ## Inspirations: Love hotels, techno beat, real images
 
+
+# Design Journal #4 : Prototyping Stage 2
+
+
+
+Grid system works now, but it took so much time!
+
+
+I used the starter project as a foundation which helped me bypass a lot of confusing unity stuff I'm not used to. Now, objects can snap to the grid, and rotate by pressing the spacebar. The one downside is now trying to modify the code and add other functionalities.
+
+
+I wanted the player to be able to move around the existing furniture set in the room, redecorating the room. Therefore, when an object is placed (meaning its placement is valid) and then clicked again, it could be picked up again, and moved. I thought this could be easily achieved by a few lines of code, making the objects’ placement invalid when it's clicked. However, the object was being instantiated on the first click on the button and then followed the mouse until it was placed, so there was no clicking on the prefab object. The actual change I had to make was to the raycast, camera, and mouse position code. Sabine helped me immensely with this. 
+
+I have also started working on the shop component following this tutorial: [Simple Shop in Unity (Buy Items, Weapons, Armor)] (https://youtu.be/HuXy4XX0hzg?si=QpPzYruDnSXiRPw8)
+
+
+
+# Design Journal #5 : Prototyping Stage 3
+
+I implemented the shop component and connected it to the inventory system. I spend pretty much the whole week working on them separately, dreading the fact that I have to somehow connect the two. Now, when you click on a shop item, it adds it to the dictionary list, which you can then access through the inventory. However, I haven't made the inventory global yet, so you can't access the items you've bought if you re-enter the scene.
+
+Then there was the camera error; for some reason after adding the ability of relocating objects, moving them around the room would interfere with the camera. I decided to delete all the cameras except for the camera in the first scene, setting it to not destroy on load. This fixed the issue, but it's not the most optimized solution. In terms of ease of work, it was a bit frustrating to constantly change scenes back and forth to test the game. 
+
+I also did the same thing with the music that's gonna be playing when decorating the room. I added it to the first scene, setting it to not destroy on load. I then made it play when the scene is room, and pause when exit from the scene room. 
+
+Furthermore, I had to control my scene changing buttons in the code with the event listener because in the instance of accepting the guest, I wanted to switch the room scene with the room locked scene. 
+
+I also lowered down the resolution to make the game look more old.
+
+
+# Design Journal #5 : Prototyping Stage: Final
+
+She officially CAN be a serial killer!!!!!
+
+I have fully implemented the variables: money, rent, kills 
+
+For now the values serve as placeholders since I want the game to progress quickly. For the future, I will make the pacing a lot slower. 
+The more money you spend, the more items you can buy for the room, leading to an increase in rent, and the higher the rent goes, the more money you will receive from each guest. Rent increases the most for beds, followed by tables, and lastly chairs.
+
+If I expand the shop, enlarge the room, and implement a system for storing and returning items to the inventory, I can add a wide variety of household items, including those for a kitchen and bathroom. As the value of the items increases, so does the rent. 
+However, there is a catch: everytime you accept a guest, you have to wait a certain amount of time before regaining access to the room (currently its set at 30 seconds), so you either have to wait, or you can barge in the room and kill the guest, which I resolved, adds 50 to your money. As Mathew pointed out, there doesn't seem to be any tangible barrier preventing the player from opting to kill the guest.
+
+I had the idea to make the room more red, or even add blood stains, or have the room music become increasingly muffled and glitchy, or make the sprite of the girl smile wider and wider. I had no time to implement these. 
+
+Additionally, I also wanted the serial killer aspect to be more implicit, lurking beneath the surface. Although there is a score for kill count, it doesn't say that's what it is, players recognize what it is as they see it increase with each kill. This decision is also reflected in the button used to kill the guest, labeled “get rid of the guest” which maintains the game's cute facade.
+
+It's important to note that the game is not self-referential, meaning it's not that when I use the phrase “get rid of the guest” I mean anything other than killing. The idea is to imbue the game with a sense of secrecy, perhaps even to turn a blind eye. There's nothing at stake when killing the guests, and there are no consequences. Just the desire to succeed. This is what ultimately characterizes the player.
+
+##Ideas to consider: 
+
+1.Maybe making the rent go down by each kill.<br />
+2.Like Mathew said, putting a police meter instead of a counter might also be a cool idea. Having just a number floating on the screen doesn't really signal much, but a meter can gradually take up more space on the screen, becoming harder to ignore.<br />
+3.Buttons I didn't implement:<br />
+Continue button: this requires a system that saves the game data, which would be the scores, inventory, and the state of the room, into memory i think?
+Decline on offer button (idk what would happen)<br />
+4.Adding more furniture to the mix.<br />
+5.As mentioned before saving the inventory<br />
+6.I also intent to make the guests more random, both in terms of when they appear and how long they stay in the room.<br />
+7.The aesthetic needs more refinement, and the explanations need more meat.<br />
+
+
+One thing I really like about the game (or the idea) is that it's very expandable. Once the basic elements are in place, it's simply a matter of adjusting values, working out the math to make it compelling.
+I plan to continue working on it in the future. That is whenever I decide to touch unity again.
+What I've learned through making this game (maybe a little too late) is that the process of prototyping is essentially taking small steps, and not being distracted by the illusion of a final product. Keeping track of the progress, taking notes, and also labeling things correctly, organizing and journaling are very valuable practices, and that is all there is to prototyping. Thanks to the Game Prototype class CART 315.
 
 
