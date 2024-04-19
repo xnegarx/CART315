@@ -99,7 +99,7 @@ The main game mechanic involves a grid placement system where objects can be sna
 
 ## Premise of the game: Girl rents out her room to people, then she uses the money to upgrade the room.
 
-<img src="https://github.com/xnegarx/CART315/assets/122397608/c092d6f0-d4f2-4a26-849b-ed5771808f45" alt="20240418_204930" width="200" height="200">
+<img src="https://github.com/xnegarx/CART315/assets/122397608/c092d6f0-d4f2-4a26-849b-ed5771808f45" alt="20240418_204930" style="width: 50%; height: auto;">
 
 
 -Genre: management game<br />
