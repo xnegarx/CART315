@@ -188,7 +188,7 @@ Additionally, I also wanted the serial killer aspect to be more implicit, lurkin
 
 It's important to note that the game is not self-referential, meaning it's not that when I use the phrase “get rid of the guest” I mean anything other than killing. The idea is to imbue the game with a sense of secrecy, perhaps even to turn a blind eye. There's nothing at stake when killing the guests, and there are no consequences. Just the desire to succeed. This is what ultimately characterizes the player.
 
-##Ideas to consider: 
+## Ideas to consider: 
 
 1.Maybe making the rent go down by each kill.<br />
 2.Like Mathew said, putting a police meter instead of a counter might also be a cool idea. Having just a number floating on the screen doesn't really signal much, but a meter can gradually take up more space on the screen, becoming harder to ignore.<br />
