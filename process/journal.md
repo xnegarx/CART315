@@ -99,7 +99,7 @@ The main game mechanic involves a grid placement system where objects can be sna
 
 ## Premise of the game: Girl rents out her room to people, then she uses the money to upgrade the room.
 
-![20240418_204930](https://github.com/xnegarx/CART315/assets/122397608/c092d6f0-d4f2-4a26-849b-ed5771808f45)
+![20240418_204930](https://github.com/xnegarx/CART315/assets/122397608/c092d6f0-d4f2-4a26-849b-ed5771808f45|width=100)
 
 
 -Genre: management game<br />
@@ -111,7 +111,7 @@ The main game mechanic involves a grid placement system where objects can be sna
 1.Grid placement system<br />
 2.Inventory mechanic<br />
 3.Shop mechanic<br />
-4.Changing the scenes<br />
+4.Changing the scenes
 
 ## Starting point: 
 
@@ -160,7 +160,8 @@ I also lowered down the resolution to make the game look more old.
 ![image](https://github.com/xnegarx/CART315/assets/122397608/79de7981-8d1f-432c-96d4-71fb2c97a69a)
 
 
-inspirations:![82fdf939-5b2e-4a56-b444-ce5b7d62002c](https://github.com/xnegarx/CART315/assets/122397608/951508d4-9bb2-49f7-891b-927cf614f620)
+inspirations:<br />
+![82fdf939-5b2e-4a56-b444-ce5b7d62002c](https://github.com/xnegarx/CART315/assets/122397608/951508d4-9bb2-49f7-891b-927cf614f620)
 AI generated. 
 
 
