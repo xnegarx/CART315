@@ -132,7 +132,8 @@ Grid system works now, but it took so much time!
 
 I used the starter project as a foundation which helped me bypass a lot of confusing unity stuff I'm not used to. Now, objects can snap to the grid, and rotate by pressing the spacebar. The one downside is now trying to modify the code and add other functionalities.
 
-![20240418_204956](https://github.com/xnegarx/CART315/assets/122397608/2c654ac7-a13c-4e7d-9b4e-955e7c6d2b11)
+
+<img src="https://github.com/xnegarx/CART315/assets/122397608/2c654ac7-a13c-4e7d-9b4e-955e7c6d2b11" alt="20240418_204956" style="width: 50%; height: auto;">
 
 I wanted the player to be able to move around the existing furniture set in the room, redecorating the room. Therefore, when an object is placed (meaning its placement is valid) and then clicked again, it could be picked up again, and moved. I thought this could be easily achieved by a few lines of code, making the objects’ placement invalid when it's clicked. However, the object was being instantiated on the first click on the button and then followed the mouse until it was placed, so there was no clicking on the prefab object. The actual change I had to make was to the raycast, camera, and mouse position code. Sabine helped me immensely with this. 
 
