@@ -99,6 +99,9 @@ The main game mechanic involves a grid placement system where objects can be sna
 
 ## Premise of the game: Girl rents out her room to people, then she uses the money to upgrade the room.
 
+![20240418_204930](https://github.com/xnegarx/CART315/assets/122397608/c092d6f0-d4f2-4a26-849b-ed5771808f45)
+
+
 -Genre: management game<br />
 -Look: Isometric view of the room. Another scene for the reception (Girl is sitting at the desk)<br />
 -Mechanic: girl can decorate the room with furniture<br />
@@ -124,12 +127,12 @@ My main concern as of now is that there are literally zero tutorials on how to m
 # Design Journal #4 : Prototyping Stage 2
 
 
-
 Grid system works now, but it took so much time!
 
 
 I used the starter project as a foundation which helped me bypass a lot of confusing unity stuff I'm not used to. Now, objects can snap to the grid, and rotate by pressing the spacebar. The one downside is now trying to modify the code and add other functionalities.
 
+![20240418_204956](https://github.com/xnegarx/CART315/assets/122397608/2c654ac7-a13c-4e7d-9b4e-955e7c6d2b11)
 
 I wanted the player to be able to move around the existing furniture set in the room, redecorating the room. Therefore, when an object is placed (meaning its placement is valid) and then clicked again, it could be picked up again, and moved. I thought this could be easily achieved by a few lines of code, making the objects’ placement invalid when it's clicked. However, the object was being instantiated on the first click on the button and then followed the mouse until it was placed, so there was no clicking on the prefab object. The actual change I had to make was to the raycast, camera, and mouse position code. Sabine helped me immensely with this. 
 
@@ -137,7 +140,13 @@ I have also started working on the shop component following this tutorial: [Simp
 
 
 
+![Screenshot 2024-04-17 194654](https://github.com/xnegarx/CART315/assets/122397608/c7169807-78ba-463b-a21c-7f92192f3566)
+
+
+
 # Design Journal #5 : Prototyping Stage 3
+
+![20240418_205013](https://github.com/xnegarx/CART315/assets/122397608/e5228774-c0ba-4280-84d0-3b69814674da)
 
 I implemented the shop component and connected it to the inventory system. I spend pretty much the whole week working on them separately, dreading the fact that I have to somehow connect the two. Now, when you click on a shop item, it adds it to the dictionary list, which you can then access through the inventory. However, I haven't made the inventory global yet, so you can't access the items you've bought if you re-enter the scene.
 
@@ -148,6 +157,12 @@ I also did the same thing with the music that's gonna be playing when decorating
 Furthermore, I had to control my scene changing buttons in the code with the event listener because in the instance of accepting the guest, I wanted to switch the room scene with the room locked scene. 
 
 I also lowered down the resolution to make the game look more old.
+![image](https://github.com/xnegarx/CART315/assets/122397608/79de7981-8d1f-432c-96d4-71fb2c97a69a)
+
+
+inspirations:![82fdf939-5b2e-4a56-b444-ce5b7d62002c](https://github.com/xnegarx/CART315/assets/122397608/951508d4-9bb2-49f7-891b-927cf614f620)
+AI generated. 
+
 
 
 # Design Journal #5 : Prototyping Stage: Final
@@ -158,6 +173,8 @@ I have fully implemented the variables: money, rent, kills
 
 For now the values serve as placeholders since I want the game to progress quickly. For the future, I will make the pacing a lot slower. 
 The more money you spend, the more items you can buy for the room, leading to an increase in rent, and the higher the rent goes, the more money you will receive from each guest. Rent increases the most for beds, followed by tables, and lastly chairs.
+
+![image](https://github.com/xnegarx/CART315/assets/122397608/272fe075-b4f0-494b-ab0a-53213197e6fd)
 
 If I expand the shop, enlarge the room, and implement a system for storing and returning items to the inventory, I can add a wide variety of household items, including those for a kitchen and bathroom. As the value of the items increases, so does the rent. 
 However, there is a catch: everytime you accept a guest, you have to wait a certain amount of time before regaining access to the room (currently its set at 30 seconds), so you either have to wait, or you can barge in the room and kill the guest, which I resolved, adds 50 to your money. As Mathew pointed out, there doesn't seem to be any tangible barrier preventing the player from opting to kill the guest.
