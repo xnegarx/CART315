@@ -205,17 +205,17 @@ One thing I really like about the game (or the idea) is that it's very expandabl
 I plan to continue working on it in the future. That is whenever I decide to touch unity again.
 What I've learned through making this game (maybe a little too late) is that the process of prototyping is essentially taking small steps, and not being distracted by the illusion of a final product. Keeping track of the progress, taking notes, and also labeling things correctly, organizing and journaling are very valuable practices, and that is all there is to prototyping. Thanks to the Game Prototype class CART 315.
 
-Assets:
-https://kenney.nl/assets/furniture-kit
-https://ruberidcrys.itch.io/anime-girl-sprite-30-expressions
+Assets:<br />
+https://kenney.nl/assets/furniture-kit <br />
+https://ruberidcrys.itch.io/anime-girl-sprite-30-expressions <br />
 
-Tutorials: 
-https://youtu.be/HuXy4XX0hzg?si=QpPzYruDnSXiRPw8
-https://youtu.be/jEYzUAhYXHI?si=nPvrmw7CW6YSeKS7
+Tutorials:<br />
+https://youtu.be/HuXy4XX0hzg?si=QpPzYruDnSXiRPw8 <br />
+https://youtu.be/jEYzUAhYXHI?si=nPvrmw7CW6YSeKS7 <br />
 
-Audio:
-Room theme - AI generated using MusicFX with this prompt: A song inspired by Denki Groove Shangri-La
-Free UI Click Sound Pack unity store
+Audio: <br />
+Room theme - AI generated using MusicFX with this prompt: A song inspired by Denki Groove Shangri-La <br />
+Free UI Click Sound Pack unity store <br />
 
 
 
