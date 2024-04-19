@@ -141,13 +141,13 @@ I have also started working on the shop component following this tutorial: [Simp
 
 
 
-![Screenshot 2024-04-17 194654](https://github.com/xnegarx/CART315/assets/122397608/c7169807-78ba-463b-a21c-7f92192f3566)
+<img src="https://github.com/xnegarx/CART315/assets/122397608/c7169807-78ba-463b-a21c-7f92192f3566" alt="Screenshot 2024-04-17 194654"  style="width: 100%; height: auto;">
 
 
 
 # Design Journal #5 : Prototyping Stage 3
 
-![20240418_205013](https://github.com/xnegarx/CART315/assets/122397608/e5228774-c0ba-4280-84d0-3b69814674da)
+<img src="https://github.com/xnegarx/CART315/assets/122397608/e5228774-c0ba-4280-84d0-3b69814674da" alt="20240418_205013" style="width: 50%; height: auto;">
 
 I implemented the shop component and connected it to the inventory system. I spend pretty much the whole week working on them separately, dreading the fact that I have to somehow connect the two. Now, when you click on a shop item, it adds it to the dictionary list, which you can then access through the inventory. However, I haven't made the inventory global yet, so you can't access the items you've bought if you re-enter the scene.
 
@@ -158,7 +158,8 @@ I also did the same thing with the music that's gonna be playing when decorating
 Furthermore, I had to control my scene changing buttons in the code with the event listener because in the instance of accepting the guest, I wanted to switch the room scene with the room locked scene. 
 
 I also lowered down the resolution to make the game look more old.
-![image](https://github.com/xnegarx/CART315/assets/122397608/79de7981-8d1f-432c-96d4-71fb2c97a69a)
+
+<img src="https://github.com/xnegarx/CART315/assets/122397608/79de7981-8d1f-432c-96d4-71fb2c97a69a" alt="image" style="width: 70%; height: auto;">
 
 
 inspirations:<br />
@@ -176,7 +177,7 @@ I have fully implemented the variables: money, rent, kills
 For now the values serve as placeholders since I want the game to progress quickly. For the future, I will make the pacing a lot slower. 
 The more money you spend, the more items you can buy for the room, leading to an increase in rent, and the higher the rent goes, the more money you will receive from each guest. Rent increases the most for beds, followed by tables, and lastly chairs.
 
-![image](https://github.com/xnegarx/CART315/assets/122397608/272fe075-b4f0-494b-ab0a-53213197e6fd)
+<img src="https://github.com/xnegarx/CART315/assets/122397608/272fe075-b4f0-494b-ab0a-53213197e6fd" alt="image" style="width: 70%; height: auto;">
 
 If I expand the shop, enlarge the room, and implement a system for storing and returning items to the inventory, I can add a wide variety of household items, including those for a kitchen and bathroom. As the value of the items increases, so does the rent. 
 However, there is a catch: everytime you accept a guest, you have to wait a certain amount of time before regaining access to the room (currently its set at 30 seconds), so you either have to wait, or you can barge in the room and kill the guest, which I resolved, adds 50 to your money. As Mathew pointed out, there doesn't seem to be any tangible barrier preventing the player from opting to kill the guest.
