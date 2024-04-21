@@ -193,7 +193,7 @@ It's important to note that the game is not self-referential, meaning it's not t
 1.Maybe making the rent go down by each kill.<br />
 2.Like Mathew said, putting a police meter instead of a counter might also be a cool idea. Having just a number floating on the screen doesn't really signal much, but a meter can gradually take up more space on the screen, becoming harder to ignore.<br />
 3.Buttons I didn't implement:<br />
-Continue button: this requires a system that saves the game data, which would be the scores, inventory, and the state of the room, into memory i think?
+Continue button: this requires a system that saves the game data, which would be the scores, inventory, and the state of the room, into memory i think?<br />
 Decline on offer button (idk what would happen)<br />
 4.Adding more furniture to the mix.<br />
 5.As mentioned before saving the inventory<br />
